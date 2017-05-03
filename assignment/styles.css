@@ -1,0 +1,89 @@
+body
+{
+	background-color: #CCFFCC;
+}
+.navbar-default
+{
+	height: 120px;
+	background-color: #D3D3D3;
+}
+
+.image
+{
+	width: 200px;
+	height:100px;
+}
+.head
+{
+	padding-right: 500px;
+}
+
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img
+{
+      width: 100%;
+      margin: auto;
+}
+ .main
+{
+    padding-right: 100px;
+    margin-left:15%;
+    text-align: center;
+    font-family: sofia;
+}
+.carousel-inner >.item>a>img, .carousel-inner>.item>img,
+ .img-responsive, .thumbnail a>img, .thumbnail>img 
+{
+    display: block;
+    max-width: 100%;
+    height: 300px;
+    width: 900px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.sub
+{
+	width: 100%;
+	padding-top: 20px;
+	height: 300px;
+
+}
+
+.paragraph
+{
+	font-family: mogra;
+	font-size: 15px;
+	padding-top: 10px;
+}
+.jumbo
+{
+	width: 200px;
+	height: 200px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.foot
+{
+	background-color: black;
+	height: 100px;
+	color: white;
+
+}
+
+.copyrights
+{
+	padding-top: 20px;
+}
+#f
+{
+padding-right: 20px;
+float: right;
+color: white;
+}
+.heading
+{
+	text-transform: uppercase;
+}

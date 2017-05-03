@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0113)https://s0.2mdn.net/6254465/1492655087616/_HPEQ1_BridgeAwareness_AcceleratingTelecommunications_728x90/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="ad.size" content="width=728,height=90">
+
+    <!-- GREENSOCK -->
+    <script src="./TweenMax.min.js"></script>
+
+    <!-- CLICKTAG -->    
+    <script>
+        var clickTag = "http://www.google.com";
+    </script>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    
+<script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script></head>
+
+<body>
+    <a href="javascript:void(window.open(window.clickTag))">
+        <div id="container" style="visibility: inherit; opacity: 1;">
+            
+            <div id="bg1"></div>
+            <div id="bg2" style="opacity: 1;"></div>
+            <div id="bg3" style="opacity: 1;"></div>
+            <div id="bg4" style="opacity: 1;"></div>
+            <div id="green_rect_container">
+                <div id="green_rect_top" style="clip: rect(0px 129px 7px 0px);"></div>
+                <div id="green_rect_right" style="clip: rect(0px 7px 36px 0px);"></div>
+                <div id="green_rect_bottom" style="clip: rect(0px 129px 7px 0px);"></div>
+                <div id="green_rect_left" style="clip: rect(0px 7px 36px 0px);"></div>
+            </div>
+
+            <div id="accelerating" class="sprite" style="opacity: 0;"></div>
+            <div id="accelerating_gray" class="sprite" style="opacity: 0.3;"></div>
+            <div id="accelerating_darkgray" class="sprite" style="opacity: 1;"></div>
+
+            <div id="copyf3" class="sprite" style="opacity: 0;"></div>
+
+            <div id="copyf4" class="sprite" style="opacity: 1;"></div>
+
+            <div id="ef_bg" style="opacity: 1;"></div>
+
+            <img src="./HP_logo.svg" id="logo" style="border-style: none; transform-origin: 100% 100% 0px; transform: matrix3d(0.8, 0.000139626, 0, 0, -0.000139626, 0.8, 0, 0, 0, 0, 1, 0, -2, 0, 0.01, 1); top: 21px; width: 114px; left: 602px;"> <!-- Use img tag to avoid Chrome 53+ shake issue with bg images. Inline style to force IE10 to hide border on image -->
+
+            <div id="CTA" style="opacity: 1;"> 
+                <div id="CTA_Copy" class="sprite"></div>
+            </div>
+
+            <div id="ef_copy" class="sprite" style="opacity: 1;"></div>
+            <div id="accelerating_next" class="sprite" style="opacity: 1;"></div>
+
+        </div>
+    </a>
+
+
+    
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="./main.js"></script>
+
+
+
+		</body></html>
