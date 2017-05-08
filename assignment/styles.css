@@ -1,16 +1,16 @@
 body
 {
-	background-color: #CCFFCC;
+	background-color: #FFF5EE;
 }
-.navbar-default
+.navbar
 {
-	height: 120px;
+	
 	background-color: #D3D3D3;
 }
 
 .image
 {
-	width: 200px;
+	width: 100px;
 	height:100px;
 }
 .head
@@ -22,7 +22,9 @@ body
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img
 {
-      width: 100%;
+      width:640px;
+   
+      height:360px;
       margin: auto;
 }
  .main
@@ -30,7 +32,7 @@ body
     padding-right: 100px;
     margin-left:15%;
     text-align: center;
-    font-family: sofia;
+    
 }
 .carousel-inner >.item>a>img, .carousel-inner>.item>img,
  .img-responsive, .thumbnail a>img, .thumbnail>img 
@@ -53,7 +55,7 @@ body
 
 .paragraph
 {
-	font-family: mogra;
+	font-family: Vollkorn;
 	font-size: 15px;
 	padding-top: 10px;
 }
@@ -64,6 +66,7 @@ body
 	padding-right: 20px;
 	padding-top: 20px;
 	padding-left: 20px;
+	
 }
 .foot
 {
@@ -86,4 +89,7 @@ color: white;
 .heading
 {
 	text-transform: uppercase;
+	font-family: Droid sans;
+
 }
+
